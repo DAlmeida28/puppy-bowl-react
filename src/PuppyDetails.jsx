@@ -2,6 +2,17 @@ import { useNavigate } from "react-router-dom"
 
 const PuppyDetails = ({singlePuppy}) => {
   const navigate = useNavigate();
+
+  const deletePuppy = async (event) => {
+    event.preventDefault();
+
+    const removePuppy = await fetch (`https://fsa-puppy-bowl.herokuapp.com/api/2501-ftb-et-web-ft/players/${singlePuppy.id}`, {
+      method: 'DELETE',
+    })
+     const x = await removePuppy.json();
+     console.log(x);
+
+  }
   return(
     <>
     {console.log(singlePuppy)}
@@ -14,6 +25,8 @@ const PuppyDetails = ({singlePuppy}) => {
 
     <button onClick={() => {navigate('/')}}>
     Go back to player list</button>
+
+    <button onClick={(deletePuppy)}>Delete Puppy</button>
     </>
   )
 }
