@@ -1,8 +1,7 @@
-import { useEffect, useState } from "react"
+import { useEffect } from "react"
 import { Link, useNavigate } from 'react-router-dom'
 
-const ListPuppies = ({setSinglePuppy}) => {
-  const [allPuppies, setAllPuppies] = useState([]);
+const ListPuppies = ({setSinglePuppy, allPuppies, setAllPuppies}) => {
   const navigate = useNavigate();
 
   useEffect(() => {
