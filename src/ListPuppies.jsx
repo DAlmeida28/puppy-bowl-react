@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 const ListPuppies = ({setSinglePuppy}) => {
   const [allPuppies, setAllPuppies] = useState([]);
@@ -16,6 +16,8 @@ const ListPuppies = ({setSinglePuppy}) => {
 
   return (<>
     <h1>List of Puppies: </h1>
+
+    <p><Link to='/addplayer'>Add player</Link></p>
     {allPuppies.map((puppy) => {
 
       return <ul>
