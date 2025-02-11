@@ -1,13 +1,20 @@
 import { Route, Routes } from 'react-router-dom'
+import { useState } from 'react'
 
 import ListPuppies from './ListPuppies.jsx'
+import PuppyDetails from './PuppyDetails.jsx'
+
 function App() {
+
+  const [singlePuppy, setSinglePuppy] = useState({});
 
   return (
     <>
-    <h1>HELLo</h1>
+
+    
     <Routes>
-      <Route path="/" element={<ListPuppies />} />
+      <Route path="/" element={<ListPuppies setSinglePuppy={setSinglePuppy}/>} />
+      <Route path="/puppydetails/:puppyID" element={<PuppyDetails singlePuppy={singlePuppy}/>}/>
     </Routes>
     </>
   )
