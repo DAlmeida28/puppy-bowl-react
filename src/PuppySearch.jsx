@@ -24,6 +24,7 @@ const PuppySearch = ({allPuppies, setSinglePuppy}) => {
 
   return(
     <>
+    <section id="search">
     <h1>Search</h1>
     <form onSubmit={(searchPuppy)}>
     <input
@@ -32,6 +33,7 @@ const PuppySearch = ({allPuppies, setSinglePuppy}) => {
     {puppyMatch ? null : <p>No Puppy Match Found.</p>}
     <button>Search</button>
     </form>
+    </section>
     </>
   )
 }

@@ -1,0 +1,23 @@
+#PuppyList {
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: space-between;
+}
+
+#header{
+  display: flex;
+  justify-content: center;
+}
+
+#search{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#SubmitPlayer{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
