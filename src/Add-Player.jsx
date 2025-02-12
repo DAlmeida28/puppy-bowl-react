@@ -31,7 +31,7 @@ const AddPlayer = () => {
   return(
     <>
     <h1>Add Player</h1>
-    <form onSubmit={submitPlayer}>
+    <form onSubmit={submitPlayer} id="SubmitPlayer">
       <input placeholder="Name" 
       onChange={((event) => {
         setNameInput(event.target.value); console.log(nameInput)

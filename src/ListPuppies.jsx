@@ -14,12 +14,15 @@ const ListPuppies = ({setSinglePuppy, allPuppies, setAllPuppies}) => {
   }, [])
 
   return (<>
+    <section id="header">
     <h1>List of Puppies: </h1>
-
+    </section>
     <p><Link to='/addplayer'>Add player</Link></p>
-    {allPuppies.map((puppy) => {
 
-      return <ul>
+    <ul id="PuppyList">
+    {allPuppies.map((puppy) => {
+      
+      return(
         <li key={puppy.id}
             onClick={() => {
               setSinglePuppy(puppy);
@@ -30,9 +33,9 @@ const ListPuppies = ({setSinglePuppy, allPuppies, setAllPuppies}) => {
           Name: {puppy.name}
           <p>Team: {puppy.teamId}</p>
           <img src={puppy.imageUrl} height="200px" width="200px" />
-        </li>
-      </ul>
+        </li>)
     })}
+    </ul>
   </>
   )
 }
